@@ -7,6 +7,12 @@ jobs:
   build:
     docker:
       - image: node:10.15.3
+        environment:
+          TZ: "/usr/share/zoneinfo/Asia/Tokyo"
+          LANG: ja_JP.UTF-8
+          LC_ALL: C.UTF-8
+          LANGUAGE: ja_JP.UTF-8
+          DEPLOY_BRANCH: master
 
     working_directory: ~/repo
 
@@ -25,7 +31,15 @@ jobs:
       # Build
       - run:
           name: Build
-          command: npm run build
+          command: |
+              npm run build
+              cd dist/
+              git init
+              git commit --allow-empty -m '[ci skip] update docs'
+              git checkout -b gh-pages
+              git add .
+              git commit -am '[ci skip] update docs'
+              git push --force git@github.com:USER/REPO.git gh-pages
 
       - save_cache:
           paths:
