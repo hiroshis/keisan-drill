@@ -41,7 +41,7 @@ jobs:
               git checkout -b gh-pages
               git add .
               git commit -am '[ci skip] update docs'
-              git push --force git@github.com:hiroishis/keisan-drill.git gh-pages
+              git push --force git@github.com:hiroshis/keisan-drill.git gh-pages
 
       - save_cache:
           paths:
