@@ -33,6 +33,8 @@ jobs:
           name: Build
           command: |
               npm run build
+              git config --global user.name  "hiroshis"
+              git config --global user.email "hiroshis.bamboo@gmail.com"
               cd dist/
               git init
               git commit --allow-empty -m '[ci skip] update docs'
