@@ -18,7 +18,7 @@
         <b-form-select v-model="multiplier_digits" :options="multiplier_options"></b-form-select>
       </b-col>
     </b-row>
-    <b-row class="commands" align-v="center">
+    <b-row class="mul-commands" align-v="center">
       <b-col>
         <b-button variant="primary" @click="createPractice">問題をつくる</b-button>
       </b-col>
@@ -40,7 +40,7 @@
       </b-col></b-row>
     </b-col></b-row>
     <b-row v-if="product > 0"><b-col class="text-right">
-      <span class="calculated">{{ toFullWidth_product }}</span>
+      <span class="product">{{ toFullWidth_product }}</span>
     </b-col></b-row>
   </b-container>
 </div>
@@ -54,14 +54,14 @@
   border: solid 1px #CCCCCC;
   border-radius: 5px;
 }
-.commands {
+.mul-commands {
   margin-top: 20px;
-}
-.calculated {
-  border-top: solid 1px #000000;
 }
 .multiplier {
   border-bottom: solid 1px #000000;
+}
+.product {
+  border-top: solid 1px #000000;
 }
 </style>
 
