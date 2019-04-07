@@ -35,7 +35,7 @@
         </b-form-group>
       </b-col>
     </b-row>
-    <b-row align-v="center">
+    <b-row class="commands" align-v="center">
       <b-col>
         <b-button variant="primary" @click="createPractice">問題をつくる</b-button>
       </b-col>
@@ -71,6 +71,9 @@
 .div-practice {
   border: solid 1px #CCCCCC;
   border-radius: 5px;
+}
+.commands {
+  /* margin-top: 20px; */
 }
 .calculated {
   margin-left: 5px;
@@ -130,7 +133,7 @@ export default {
       this.sho_array = []
       this.tochu_array = []
       this.tochu_seki_array = []
-      this.answer_disabled = false
+      this.answer_disabled = true
     },
     createPractice: function () {
       this.clear()
@@ -143,6 +146,7 @@ export default {
       if (!this.amari_selected) {
         this.warareru -= this.warareru % this.waru
       }
+      this.answer_disabled = false
     },
     createAnswer: function () {
       this.sho = Math.floor(this.warareru / this.waru)
