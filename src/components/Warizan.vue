@@ -35,7 +35,7 @@
         </b-form-group>
       </b-col>
     </b-row>
-    <b-row class="commands" align-v="center">
+    <b-row align-v="center">
       <b-col>
         <b-button variant="primary" @click="createPractice">問題をつくる</b-button>
       </b-col>
@@ -71,9 +71,6 @@
 .div-practice {
   border: solid 1px #CCCCCC;
   border-radius: 5px;
-}
-.commands {
-  /* margin-top: 20px; */
 }
 .calculated {
   margin-left: 5px;

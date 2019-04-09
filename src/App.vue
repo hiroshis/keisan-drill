@@ -4,6 +4,7 @@
       <b-nav tabs>
         <b-nav-item to="kakezan" active-class="active">掛け算</b-nav-item>
         <b-nav-item to="warizan" active-class="active">割り算</b-nav-item>
+        <b-nav-item to="bunsu" active-class="active">分数</b-nav-item>
       </b-nav>
     </div>
     <router-view/>
